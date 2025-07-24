@@ -1,0 +1,38 @@
+| OS               | CPU                      | RAM      | Disk Space |
+| ---------------- | ------------------------ | -------- | ---------- |
+| **Windows 10**   | 1 GHz, 2-core            | 4 GB min | \~64 GB    |
+| **Ubuntu 22.04** | 2-core                   | 2 GB min | \~25 GB    |
+| **Kali Linux**   | 2-core                   | 2-4 GB   | \~20 GB    |
+| **macOS Sonoma** | Apple Silicon / Intel i5 | 8 GB     | \~30 GB    |
+
+
+a. Linux tools:
+htop, top – see live CPU/RAM usage
+
+nvidia-smi – see GPU usage
+
+iotop, du – disk I/O and space
+
+b. Windows:
+Task Manager
+
+Resource Monitor
+
+perfmon / Performance Monitor
+
+c. Container-level or Cloud:
+Docker stats: docker stats
+
+Kubernetes: kubectl top pod
+
+Cloud (AWS, Azure, GCP): monitoring dashboards (CloudWatch, etc.)
+
+
+You can benchmark or profile actual workloads using:
+
+Workload	Tool for measuring usage
+Data pipelines	Spark UI, Databricks, etc.
+GPU tasks	nvidia-smi, CUDA Profiler
+Web scraping	Measure CPU + network usage
+Password cracking	Hashcat’s benchmarks
+Streaming (video)	ffmpeg stats, GPU encode usage
